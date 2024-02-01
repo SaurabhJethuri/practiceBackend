@@ -141,7 +141,6 @@ app.get("/products/:id", wrapAsync(async (req, res) => {
         req.flash("error", " this product not exist");
         res.redirect("/products");
     }
-    console.log(product);
     res.render("product.ejs", { product });
 }));
 app.post("/products", isLoggedin, wrapAsync(async (req, res, next) => {
