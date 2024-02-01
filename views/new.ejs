@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <%= success %>
+    </h1>
+    <h1>
+        <%= error %>
+    </h1>
+    <h1>ADD Product</h1>
+    <form method="Post" action="/products">
+        <input placeholder="Enter product name" type="text" name="product[productName] " required><br><br>
+        <textarea placeholder="Enter product description" type="text" name="product[description]"
+            required></textarea><br><br>
+        <input placeholder="Enter price" type="number" name="product[price]" required><br><br>
+        <input placeholder="paste URL link of image" type="text" name="product[imageURL]">
+
+        <button>submit</button>
+    </form>
+
+</body>
+
+</html>

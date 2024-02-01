@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <%= success %>
+    </h1>
+    <h1>
+        <%= error %>
+    </h1>
+    <form method="POST" action="/products/<%= product.id %>?_method=PUT">
+        <label for="productName">Enter Product Name</label><br><br>
+        <textarea id="productName" name="product[productName]" required><%= product.productName  %></textarea><br><br>
+        <label for="description">Enter Description</label><br><br>
+        <textarea id="description" name="product[description]" required><%= product.description  %></textarea><br><br>
+        <label for="imageURL">Enter Image URL</label><br><br>
+        <textarea id="imageURL" name="product[image]" required></textarea><br><br>
+        <label for="price">Enter Price</label><br><br>
+        <textarea id="price" name="product[price]" required><%= product.price %></textarea><br><br>
+        <button>submit</button>
+    </form>
+</body>
+
+</html>
